@@ -1,6 +1,0 @@
-site_name: My Docs
-
-nav: 
-  - Home: index.md
-  - Deep Dive: core-concept.md
-  - Node Refrence: nodes.md
