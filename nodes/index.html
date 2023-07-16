@@ -229,18 +229,14 @@
 
 <h1 id="compare-nodes">Compare Nodes</h1>
 <h2 id="max">Max</h2>
-<p><img alt="Max Node Image" src="../node-images/max.png" /></p>
-<p>Returns the larger value from each input. If the input is a vector each value
-is operated on independently.</p>
 <h2 id="min">Min</h2>
-<p><img alt="Min Node Image" src="../node-images/min.png" /></p>
-<p>Returns the smaller value from each input. If the input is a vector each value
-is operated on independently.</p>
+<p><img alt="min-max.png" src="../node-images/min-max.png" /></p>
+<p>Returns the smaller or larger of the inputs. Each component of the input is operated on seperatly.</p>
 <h2 id="lerpmixblend">Lerp/Mix/Blend</h2>
 <p><img alt="Lerp" src="../node-images/lerp.png" /></p>
 <p>Lerp between A and B inputs.</p>
-<p>Lerp is a linear interpolation between the first 2 elements. A table can be
-found below showing the expected values.<br />
+<p>found below showing the expected values.<br />
+Lerp is a linear interpolation between the first 2 elements. A table can be
 This node is excelent for smoothly picking between values in a range.  </p>
 <table>
 <thead>
@@ -293,21 +289,11 @@ This node is excelent for smoothly picking between values in a range.  </p>
 If X &gt; Edge 2 return Edge 2.<br />
 Otherwise return a smoothly changing value between the two edges.</p>
 <h3 id="greater-than">Greater Than</h3>
-<p><img alt="Greater" src="../node-images/greater.png" /></p>
-<p>If A &gt; B return 1.<br />
-Otherwise return 0.</p>
 <h3 id="less-than">Less Than</h3>
-<p><img alt="Less" src="../node-images/less.png" /></p>
-<p>If A &lt; B return 1.<br />
-Otherwise return 0.</p>
 <h3 id="greater-than-or-equal">Greater Than or Equal</h3>
-<p><img alt="Greater or Equal" src="../node-images/greaterEqual.png" /></p>
-<p>If A =&gt; B return 1.<br />
-Otherwise return 0.</p>
 <h3 id="less-than-or-equal">Less Than or Equal</h3>
-<p><img alt="Less or Equal" src="../node-images/lessEqual.png" /></p>
-<p>If A &lt;= B return 1.<br />
-Otherwise return 0.</p>
+<p><img alt="compare" src="../node-images/compare.png" /></p>
+<p>Returns 1 if the condition is met. 0 otherwise. </p>
 <h1 id="math-nodes">Math Nodes</h1>
 <h2 id="vector-length">Vector Length</h2>
 <p><img alt="Vector Lenght" src="../node-images/vector_length.png" /></p>
@@ -315,21 +301,13 @@ Otherwise return 0.</p>
 the vector using the same logic found in the
 <a href="https://en.wikipedia.org/wiki/Pythagorean_theorem">Pythagorean theorem.</a></p>
 <h2 id="add">Add</h2>
-<p><img alt="Add" src="../node-images/add.png" /></p>
-<p>Add the values together. If a vector is used each component is operated on
-independently.</p>
 <h2 id="subtract">Subtract</h2>
-<p><img alt="Subtract" src="../node-images/sub.png" /></p>
-<p>Subtract the values from each other. If a vector is used each component is
-operated on independently.</p>
 <h2 id="multiply">Multiply</h2>
-<p><img alt="mul" src="../node-images/mul.png" /></p>
-<p>Multiply the values with each other. If a vector is used each component is
-operated on independently.</p>
 <h2 id="divide">Divide</h2>
-<p><img alt="div" src="../node-images/div.png" /></p>
-<p>Divide the values from each other. If a vector is used each component is
-operated on independently.</p>
+<p><img alt="Basic Math" src="../node-images/basic-math.png" /></p>
+<p>These math nodes preform basic math on their inputs. 
+The ports are always the same type and each operation takes place independently 
+on the components of the inputs.</p>
 <h1 id="misc">Misc</h1>
 <h2 id="hsv-to-rgb">HSV To RGB</h2>
 <h2 id="rgb-to-hsv">RGB To HSV</h2>
@@ -368,7 +346,8 @@ material properties can be found and edited in the upper text box.</p>
 Poiyomi texture.</p>
 <h2 id="audiolink-simple-sample">AudioLink Simple Sample</h2>
 <p><img alt="audiolink_sample" src="../node-images/audiolink_sample.png" /></p>
-<p>Sample the AudioLink intensity for individual bands at a particular point in time.</p>
+<p>Sample the AudioLink intensity for individual bands at a particular point in time.
+Has Audio Link is 1 if audio link is active at the moment.</p>
 <h2 id="audiolink-chrono">AudioLink Chrono</h2>
 <p><img alt="chrono" src="../node-images/chrono.png" /></p>
 <p>Sample the AudioLink Chrono values. The output acts roughly like time modified in the ways that the dropdowns suggest.</p>
