@@ -113,14 +113,17 @@ tools used to create the main shader. </p>
 <p>Angry Shader Forge generates <code>ShaderModules</code> in a format that is compatible with
 Poiyomi's shader. A module is compiled into a list of commands starting at the
 Output working back. This includes mangling the names of the shader variables
-so that they do not conflict with any other variables.</p>
+so that they do not conflict with any other variables from other modules even
+if the names appear the same in the UI.</p>
 <p>The end result of this is that the property named in the Output module is
 changed at a stage in the Poiyomi shader before much has happened. This in
 essence allows you to have per pixel and per frame control over almost all
 values in the Poiyomi shader. </p>
 <p>Of note is that since we are modifying these values they must be animated. 
 The shader locking process described above will inline these properties and
-prevent this tool from working if they are not animated.</p></div>
+prevent this tool from working if they are not animated. 
+At this time the tool can not assist in ensure that things are locked when they
+should be.</p></div>
             </div>
         </div>
 
