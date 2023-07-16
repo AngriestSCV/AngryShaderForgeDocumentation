@@ -1,18 +1,19 @@
 #Compare Nodes
 
 ## Max
-Returns the larger value from each input. If the input is a vector each value
-is operated on independently.
 
 ## Min
-Returns the smaller value from each input. If the input is a vector each value
-is operated on independently.
+![min-max.png](node-images/min-max.png)
+
+Returns the smaller or larger of the inputs. Each component of the input is operated on seperatly.
 
 ## Lerp/Mix/Blend
+![Lerp](node-images/lerp.png)
+
 Lerp between A and B inputs.
 
-Lerp is a linear interpolation between the first 2 elements. A table can be
 found below showing the expected values.  
+Lerp is a linear interpolation between the first 2 elements. A table can be
 This node is excelent for smoothly picking between values in a range.  
 
 | A       | B        | Factor  |   Value     |
@@ -25,71 +26,80 @@ This node is excelent for smoothly picking between values in a range.
 
 
 ## Step
+![Step](node-images/step.png)
+
 If b > a return 1. Otherwise return 0.
 
 ### SmoothStep
+![Smooth Step](node-images/smooth_step.png)
+
 If X < Edge 1 return Edge 1.  
 If X > Edge 2 return Edge 2.  
 Otherwise return a smoothly changing value between the two edges.
 
 ### Greater Than
-If A > B return 1.  
-Otherwise return 0.
 
 ### Less Than
-If A < B return 1.  
-Otherwise return 0.
 
 ### Greater Than or Equal
-If A => B return 1.  
-Otherwise return 0.
-
 
 ### Less Than or Equal
-If A <= B return 1.  
-Otherwise return 0.
+![compare](node-images/compare.png)
+
+Returns 1 if the condition is met. 0 otherwise. 
 
 #Math Nodes
 
 ## Vector Length
+![Vector Lenght](node-images/vector_length.png)
+
 Get the [Euclidean](https://en.wikipedia.org/wiki/Euclidean_distance) length of
 the vector using the same logic found in the
 [Pythagorean theorem.](https://en.wikipedia.org/wiki/Pythagorean_theorem)
 
 
 ## Add
-Add the values together. If a vector is used each component is operated on
-independently.
 
 ## Subtract
-Subtract the values from each other. If a vector is used each component is
-operated on independently.
 
 ## Multiply
-Multiply the values with each other. If a vector is used each component is
-operated on independently.
 
 ## Divide
-Divide the values from each other. If a vector is used each component is
-operated on independently.
+![Basic Math](node-images/basic-math.png)
+
+These math nodes preform basic math on their inputs. 
+The ports are always the same type and each operation takes place independently 
+on the components of the inputs.
 
 #Misc
+
 ## HSV To RGB
-The input is assumed to be in Hue Saturation Value Alpha format.  
-The output is in Red Green Blue Alpha format.
 
 ## RGB To HSV
-The input is assumed to be in Red Green Blue Alpha format.  
-The output is in Hue Saturation Value Alpha format.
+![hsv_converters](node-images/hsv_converters.png)
+
+Convert between (Hue Saturation Value Alpha) and (Red Green Blue Alpha)
 
 ## Combine XYZW
+![combine_xyzw](node-images/combine_xyzw.png)
+
 Combine several nodes into one. Missing Values will be replaced with 0.
 
 ## Zero Extend
+![zero_extend](node-images/zero_extend.png)
+
 Extend the input to contain more values. Missing values will be replaced with
-0.
+0
+
+## Split
+![split](node-images/split.png)
+
+This node splits a multi component input into parts. The outputs dynamically change to match the avaliable 
+ones in the input.
 
 ## Raw Text
+![raw_text](node-images/raw_text.png)
+
 This node allows raw shader code to be injected.  
 
 The top section allows you to add inputs and outputs. These values will be
@@ -98,11 +108,17 @@ that allows you to enter your own code. Instead of using the variables you
 requested wrapp them in braces like `{{this}}`. This will cause your variables
 to have their names mangled to match the values actually present in the shader.
 
+In the example below the value Bang is replaced with Clang.xyxy.
+
 #Input
 ## Time
+![time](node-images/time.png)
+
 Returns the number of seconds since the world loaded. This is not synced.
 
 ## Property
+![property](node-images/property.png)
+
 Allows creating a property thatt can be edited in your modules section of the
 material properties.  If checked the `Is Constant` checkbox will cause the
 value to be used directly and it will not be avaliable for editing. 
@@ -111,42 +127,66 @@ The type of property can be selected from the dropdown. The name used in the
 material properties can be found and edited in the upper text box.
 
 ## Texture - Poiyomi controls
+![texture](node-images/texture.png)
+
 Create a new texture that is configured like it would be if it was a built in
 Poiyomi texture.
 
-## Audio Link Simple Sample
-Sample the AudioLink intensity for individual bands at a particular point in time.
+## AudioLink Simple Sample
+![audiolink_sample](node-images/audiolink_sample.png)
 
-## GradientTextureLogic
+Sample the AudioLink intensity for individual bands at a particular point in time.
+Has Audio Link is 1 if audio link is active at the moment.
+
+## AudioLink Chrono
+![chrono](node-images/chrono.png)
+
+Sample the AudioLink Chrono values. The output acts roughly like time modified in the ways that the dropdowns suggest.
+
+## Gradient
+![gradient](node-images/gradient.png)
+
 Create a new texture that to act as a gradient including the Poiyomi built in
-gradient editor.
+gradient editor. 
 
 ## UVLogic
+![uv](node-images/uv.png)
+
 Sample UVS. This provides an interface like you would expect to find on a texture.
 
 #Trig
+
 ## Sine
+
 ## Cosine
+
 ## Tangent
+![trig](node-images/trig.png)
+
 Each of these functions takes one input in radians and returns a value
 according to normal trig rules.
 
 ## ArcSine
+
 ## ArcCosine
+
 ## ArcTangent
+![arc_trig](node-images/arc_trig.png)
+
 Each of these functions takes one input and returns a value
 according to normal trig rules.
 
 ## ToDegrees
-Convert a value in radians to degrees
-
 ## ToRadians
-Convert a value in degrees to radians 
+![angle_conversion](node-images/angle_conversion.png)
+
+Convert values between degrees and radians depending on the node selected
 
 ## PoiModuleOutput
+![poi_output](node-images/poi_output.png)
+
 This is a special node that you can not delete or copy.
 
 
 This node is used to interact with the larger Poiyomi shader and set values
 used elsewhere in the shader. 
-
