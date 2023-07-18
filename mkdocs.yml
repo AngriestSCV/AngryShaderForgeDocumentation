@@ -1,6 +1,13 @@
-site_name: My Docs
+site_name: Angry Shader Forge Docs
 
 nav: 
   - Home: index.md
   - Deep Dive: core-concept.md
   - Node Refrence: nodes.md
+
+theme:
+    name: material
+    palette:
+        scheme: slate
+        primary: green
+    
