@@ -10,6 +10,32 @@ The initial release video contains enough to get you started.
 <!-- initial release video on youtube -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/73M6UEvoF4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<style>
+    .gumroad-button {
+        background-color: #4cae4f;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .gumroad-button-text {
+        color: #fff !important;
+    }
+</style>
+
+<a href="https://angriestscv.gumroad.com/l/AngryShaderForge">
+    <div class="gumroad-button">
+        <h1 class="gumroad-button-text " >Click to Find the Product on Gumroad</h1>
+    </div>
+</a>
+
+<a href="https://discord.gg/apqHd3meEs">
+    <div class="gumroad-button">
+        <h1 class="gumroad-button-text " >Join The AngryLabs Discord</h1>
+    </div>
+</a>
+
+
+
+
 ## Requirements
 Poiyomi 8 pro is required. The free version does not provide the required files
 and it will not be supported in the foreseeable future
@@ -37,6 +63,11 @@ text area. Click the `Add Property` button to add this property as an available
 output. At this point you are ready to move on to building your shader module.
 
 ### Nodes
+
+Nodes are made and edited in their own editor that comes with the tool.
+With it you connect them together to build up a module. 
+It also includes an integrated module builder, installer, 
+and shader generator.
 
 ### Shader Build Process
 There are 2 ways to build your module. The first is with the `Full Send` button
