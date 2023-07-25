@@ -4,6 +4,7 @@ nav:
   - Home: index.md
   - Deep Dive: core-concept.md
   - Node Refrence: nodes.md
+  - Examples: examples.md
 
 theme:
     name: material

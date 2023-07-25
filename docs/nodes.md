@@ -1,13 +1,11 @@
-#Compare Nodes
+##Compare Nodes
 
-## Max
-
-## Min
+### Max / Min
 ![min-max.png](node-images/min-max.png)
 
 Returns the smaller or larger of the inputs. Each component of the input is operated on seperatly.
 
-## Lerp/Mix/Blend
+### Lerp/Mix/Blend
 ![Lerp](node-images/lerp.png)
 
 Lerp between A and B inputs.
@@ -25,7 +23,7 @@ This node is excelent for smoothly picking between values in a range.
 | 2       | 3        | 0.75    |     2.75    |
 
 
-## Step
+### Step
 ![Step](node-images/step.png)
 
 If b > a return 1. Otherwise return 0.
@@ -37,20 +35,14 @@ If X < Edge 1 return Edge 1.
 If X > Edge 2 return Edge 2.  
 Otherwise return a smoothly changing value between the two edges.
 
-### Greater Than
-
-### Less Than
-
-### Greater Than or Equal
-
-### Less Than or Equal
+### Greater Than &  Less Than 
 ![compare](node-images/compare.png)
 
 Returns 1 if the condition is met. 0 otherwise. 
 
-#Math Nodes
+## Math Nodes
 
-## Vector Length
+### Vector Length
 ![Vector Lenght](node-images/vector_length.png)
 
 Get the [Euclidean](https://en.wikipedia.org/wiki/Euclidean_distance) length of
@@ -58,46 +50,40 @@ the vector using the same logic found in the
 [Pythagorean theorem.](https://en.wikipedia.org/wiki/Pythagorean_theorem)
 
 
-## Add
-
-## Subtract
-
-## Multiply
-
-## Divide
+### Add / Subtract / Multiply / Divide
 ![Basic Math](node-images/basic-math.png)
 
 These math nodes preform basic math on their inputs. 
 The ports are always the same type and each operation takes place independently 
 on the components of the inputs.
 
-#Misc
+## Misc
 
-## HSV To RGB
+### HSV To RGB
 
-## RGB To HSV
+### RGB To HSV
 ![hsv_converters](node-images/hsv_converters.png)
 
 Convert between (Hue Saturation Value Alpha) and (Red Green Blue Alpha)
 
-## Combine XYZW
+### Combine XYZW
 ![combine_xyzw](node-images/combine_xyzw.png)
 
 Combine several nodes into one. Missing Values will be replaced with 0.
 
-## Zero Extend
+### Zero Extend
 ![zero_extend](node-images/zero_extend.png)
 
 Extend the input to contain more values. Missing values will be replaced with
 0
 
-## Split
+### Split
 ![split](node-images/split.png)
 
 This node splits a multi component input into parts. The outputs dynamically change to match the avaliable 
 ones in the input.
 
-## Raw Text
+### Raw Text
 ![raw_text](node-images/raw_text.png)
 
 This node allows raw shader code to be injected.  
@@ -108,7 +94,7 @@ that allows you to enter your own code. Instead of using the variables you
 requested wrapp them in braces like `{{this}}`. This will cause your variables
 to have their names mangled to match the values actually present in the shader.
 
-In the example below the value Bang is replaced with Clang.xyxy.
+In the example above the value Bang is replaced with Clang.xyxy.
 
 #Input
 ## Time
@@ -121,7 +107,7 @@ Returns the number of seconds since the world loaded. This is not synced.
 
 Allows creating a property thatt can be edited in your modules section of the
 material properties.  If checked the `Is Constant` checkbox will cause the
-value to be used directly and it will not be avaliable for editing. 
+value to be used directly and it will not be avaliable for editing in the inspector. 
 
 The type of property can be selected from the dropdown. The name used in the
 material properties can be found and edited in the upper text box.
@@ -156,28 +142,20 @@ Sample UVS. This provides an interface like you would expect to find on a textur
 
 #Trig
 
-## Sine
-
-## Cosine
-
-## Tangent
+## Sine / Cosine / Tangent
 ![trig](node-images/trig.png)
 
 Each of these functions takes one input in radians and returns a value
 according to normal trig rules.
 
-## ArcSine
+## ArcSine / ArcCosine / ArcTangent
 
-## ArcCosine
-
-## ArcTangent
 ![arc_trig](node-images/arc_trig.png)
 
 Each of these functions takes one input and returns a value
 according to normal trig rules.
 
-## ToDegrees
-## ToRadians
+## ToDegrees / ToRadians
 ![angle_conversion](node-images/angle_conversion.png)
 
 Convert values between degrees and radians depending on the node selected
@@ -186,7 +164,6 @@ Convert values between degrees and radians depending on the node selected
 ![poi_output](node-images/poi_output.png)
 
 This is a special node that you can not delete or copy.
-
 
 This node is used to interact with the larger Poiyomi shader and set values
 used elsewhere in the shader. 
