@@ -858,7 +858,7 @@ on the components of the inputs.</p>
 <p>Convert between (Hue Saturation Value Alpha) and (Red Green Blue Alpha)</p>
 <h3 id="combine-xyzw">Combine XYZW</h3>
 <p><img alt="combine_xyzw" src="../node-images/combine_xyzw.png" /></p>
-<p>Combine several nodes into one. Missing Values will be replaced with 0.</p>
+<p>Combine several nodes into one value. Missing Values will be replaced with 0.</p>
 <h3 id="zero-extend">Zero Extend</h3>
 <p><img alt="zero_extend" src="../node-images/zero_extend.png" /></p>
 <p>Extend the input to contain more values. Missing values will be replaced with
@@ -871,9 +871,9 @@ ones in the input.</p>
 <p><img alt="raw_text" src="../node-images/raw_text.png" /></p>
 <p>This node allows raw shader code to be injected.  </p>
 <p>The top section allows you to add inputs and outputs. These values will be
-initilized before your code runs. The next section is a multi line text box
+initialized before your code runs. The next section is a multi line text box
 that allows you to enter your own code. Instead of using the variables you
-requested wrapp them in braces like <code>{{this}}</code>. This will cause your variables
+requested wrap them in braces like <code>{{this}}</code>. This will cause your variables
 to have their names mangled to match the values actually present in the shader.</p>
 <p>In the example above the value Bang is replaced with Clang.xyxy.</p>
 <h1 id="input">Input</h1>
@@ -882,7 +882,7 @@ to have their names mangled to match the values actually present in the shader.<
 <p>Returns the number of seconds since the world loaded. This is not synced.</p>
 <h2 id="property">Property</h2>
 <p><img alt="property" src="../node-images/property.png" /></p>
-<p>Allows creating a property thatt can be edited in your modules section of the
+<p>Allows creating a property that can be edited in your modules section of the
 material properties.  If checked the <code>Is Constant</code> checkbox will cause the
 value to be used directly and it will not be avaliable for editing in the inspector. </p>
 <p>The type of property can be selected from the dropdown. The name used in the
@@ -900,7 +900,7 @@ Has Audio Link is 1 if audio link is active at the moment.</p>
 <p>Sample the AudioLink Chrono values. The output acts roughly like time modified in the ways that the dropdowns suggest.</p>
 <h2 id="gradient">Gradient</h2>
 <p><img alt="gradient" src="../node-images/gradient.png" /></p>
-<p>Create a new texture that to act as a gradient including the Poiyomi built in
+<p>Create a new texture to act as a gradient including the Poiyomi built in
 gradient editor. </p>
 <h2 id="uvlogic">UVLogic</h2>
 <p><img alt="uv" src="../node-images/uv.png" /></p>
