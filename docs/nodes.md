@@ -69,7 +69,7 @@ Convert between (Hue Saturation Value Alpha) and (Red Green Blue Alpha)
 ### Combine XYZW
 ![combine_xyzw](node-images/combine_xyzw.png)
 
-Combine several nodes into one. Missing Values will be replaced with 0.
+Combine several nodes into one value. Missing Values will be replaced with 0.
 
 ### Zero Extend
 ![zero_extend](node-images/zero_extend.png)
@@ -89,9 +89,9 @@ ones in the input.
 This node allows raw shader code to be injected.  
 
 The top section allows you to add inputs and outputs. These values will be
-initilized before your code runs. The next section is a multi line text box
+initialized before your code runs. The next section is a multi line text box
 that allows you to enter your own code. Instead of using the variables you
-requested wrapp them in braces like `{{this}}`. This will cause your variables
+requested wrap them in braces like `{{this}}`. This will cause your variables
 to have their names mangled to match the values actually present in the shader.
 
 In the example above the value Bang is replaced with Clang.xyxy.
@@ -105,7 +105,7 @@ Returns the number of seconds since the world loaded. This is not synced.
 ## Property
 ![property](node-images/property.png)
 
-Allows creating a property thatt can be edited in your modules section of the
+Allows creating a property that can be edited in your modules section of the
 material properties.  If checked the `Is Constant` checkbox will cause the
 value to be used directly and it will not be avaliable for editing in the inspector. 
 
@@ -132,7 +132,7 @@ Sample the AudioLink Chrono values. The output acts roughly like time modified i
 ## Gradient
 ![gradient](node-images/gradient.png)
 
-Create a new texture that to act as a gradient including the Poiyomi built in
+Create a new texture to act as a gradient including the Poiyomi built in
 gradient editor. 
 
 ## UVLogic
