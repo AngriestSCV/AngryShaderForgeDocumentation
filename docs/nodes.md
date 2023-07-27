@@ -150,6 +150,16 @@ according to normal trig rules.
 Each of these functions takes one input and returns a value
 according to normal trig rules.
 
+## ATan2
+![arctan2](node-images/atan2.png)
+
+This is a specialized version of Arc Tangent that takes 2 values and can
+determine which angle the value belongs to. The normal Arc Tangent can't
+determine a diffrence between 45 and 135 degrees for instance. can give the
+confusing results in those cases, but `atan2` uses the fact that it gets 2
+values in to diffrentiate these cases.
+
+
 ## ToDegrees / ToRadians
 ![angle_conversion](node-images/angle_conversion.png)
 
