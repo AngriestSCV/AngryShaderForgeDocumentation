@@ -7,6 +7,7 @@ Returns the smaller or larger of the inputs. Each component of the input is oper
 
 ### Lerp/Mix/Blend
 ![Lerp](node-images/lerp.png)
+<h2>High detail lerp docs <a href="lerp.md">Here</a></h2>
 
 Lerp between A and B inputs.
 
@@ -14,13 +15,7 @@ found below showing the expected values.
 Lerp is a linear interpolation between the first 2 elements. A table can be
 This node is excelent for smoothly picking between values in a range.  
 
-| A       | B        | Factor  |   Value     |
-| ------  | -------- | ------- | ----------- |
-| 0       | 1        | 0       |     0       |
-| 0       | 1        | 1       |     1       |
-| 0       | 0        | 1       |     0       |
-| 0       | 1        | 0.5     |     0.5     |
-| 2       | 3        | 0.75    |     2.75    |
+See the link above for a detailed breakdown of exactly how this node works.
 
 
 ### Step

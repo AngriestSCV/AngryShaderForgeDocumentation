@@ -3,7 +3,10 @@ site_name: Angry Shader Forge Docs
 nav: 
   - Home: index.md
   - Deep Dive: core-concept.md
-  - Node Refrence: nodes.md
+  - Node Refrence: 
+      - All Nodes: nodes.md
+      - Lerp Deep Dive: nodes/lerp.md
+  
   - Examples: examples.md
 
 theme:
