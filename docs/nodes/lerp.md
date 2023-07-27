@@ -1,6 +1,6 @@
 ![Lerp](../node-images/lerp.png)
 
-This is the lerp node. As indiciated by it's title you may want to think about
+This is the lerp node. As indicated by it's title you may want to think about
 it as the Mix or Blend node from other software.
 
 While the examples given below are only for single values each element in a
@@ -29,6 +29,6 @@ Let's see another one.
 ![Lerp-3-to-1](lerp-3-to-1.png)
 
 In this one we are lerping from 3 to 1. Notice that the high value is less than
-the low value. This is fine. That just means lareger factors get us a smaller
+the low value. This is fine. That just means larger factors get us a smaller
 value. As we can see this line also continues out of the normal bounds.
 
