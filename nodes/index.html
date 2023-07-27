@@ -12,14 +12,14 @@
         <link rel="prev" href="../core-concept/">
       
       
-        <link rel="next" href="../examples/">
+        <link rel="next" href="lerp/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Node Refrence - Angry Shader Forge Docs</title>
+        <title>All Nodes - Angry Shader Forge Docs</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Node Refrence
+              All Nodes
             
           </span>
         </div>
@@ -221,6 +221,35 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Node Refrence
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Node Refrence
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -228,12 +257,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Node Refrence
+          All Nodes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Node Refrence
+        All Nodes
       </a>
       
         
@@ -486,6 +515,27 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lerp/" class="md-nav__link">
+        Lerp Deep Dive
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -783,52 +833,13 @@
 <p>Returns the smaller or larger of the inputs. Each component of the input is operated on seperatly.</p>
 <h3 id="lerpmixblend">Lerp/Mix/Blend</h3>
 <p><img alt="Lerp" src="../node-images/lerp.png" /></p>
+<h2>High detail lerp docs <a href="lerp.md">Here</a></h2>
+
 <p>Lerp between A and B inputs.</p>
 <p>found below showing the expected values.<br />
 Lerp is a linear interpolation between the first 2 elements. A table can be
 This node is excelent for smoothly picking between values in a range.  </p>
-<table>
-<thead>
-<tr>
-<th>A</th>
-<th>B</th>
-<th>Factor</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0.5</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>2</td>
-<td>3</td>
-<td>0.75</td>
-<td>2.75</td>
-</tr>
-</tbody>
-</table>
+<p>See the link above for a detailed breakdown of exactly how this node works.</p>
 <h3 id="step">Step</h3>
 <p><img alt="Step" src="../node-images/step.png" /></p>
 <p>If b &gt; a return 1. Otherwise return 0.</p>
