@@ -135,6 +135,21 @@ gradient editor.
 
 Sample UVS. This provides an interface like you would expect to find on a texture.
 
+## Global Mask
+![global-mask-node](node-images/global-mask-node.png)
+![global-mask-editor](node-images/global-mask-inspector.png)
+
+This node provides access to the global masks you are use to in Poi.
+While there isn't much to see in the node editor the inspector uses the same
+dropdown that you can find in many other places in the shader.
+
+## Read Property
+![read-property](node-images/read-property.png)
+
+Just as the Poi Output node allows you to write properties this node enables
+you to read from them. This when used with the global mask node enables you to
+disable your node for certian parts of the mesh.
+
 #Trig
 
 ## Sine / Cosine / Tangent

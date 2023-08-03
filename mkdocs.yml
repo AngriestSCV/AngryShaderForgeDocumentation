@@ -8,6 +8,7 @@ nav:
       - Lerp Deep Dive: nodes/lerp.md
   
   - Examples: examples.md
+  - Change Log: changelog.md
 
 theme:
     name: material
