@@ -150,6 +150,14 @@ Just as the Poi Output node allows you to write properties this node enables
 you to read from them. This when used with the global mask node enables you to
 disable your node for certian parts of the mesh.
 
+## Camera Distance / Proximity
+![camera-distance](node-images/camera-distance.png)
+
+This node provides the distance a pixel is from the camera.
+
+The world output is in world space.  
+The object output is in local space to the object and it is effected by object scale.
+
 #Trig
 
 ## Sine / Cosine / Tangent
