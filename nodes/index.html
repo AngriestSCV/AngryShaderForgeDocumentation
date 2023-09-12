@@ -403,6 +403,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#preview" class="md-nav__link">
+    Preview
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -747,6 +754,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#preview" class="md-nav__link">
+    Preview
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -958,6 +972,20 @@ that allows you to enter your own code. Instead of using the variables you
 requested wrap them in braces like <code>{{this}}</code>. This will cause your variables
 to have their names mangled to match the values actually present in the shader.</p>
 <p>In the example above the value Bang is replaced with Clang.xyxy.</p>
+<p>Note that when this is used with the Preview Node you will often have a broken
+shader while you are typing. This is to be expected and the shader is
+recreated every time you update the text.</p>
+<h3 id="preview">Preview</h3>
+<p><img alt="preview" src="../node-images/preview.png" /></p>
+<p>This node allows for viewing of previews of parts of the shader to help
+visualize the logic.  To use it plug any node in to its input. Float nodes will
+be shown in black and white. Vector2 and Vector3 nodes will be shown by
+replacing. The alpha channel for Vector4s are set to fully opaque to make it
+possible to view the preview.</p>
+<p>The preview node can not handle the ReadProperty , Global Mask, or Camera
+Distance node. Using them in a will result in an error and either the shader
+being pink or not generating at all. </p>
+<p>The Debug Panel is for internal use and will change in the future, but you may find it helpful.</p>
 <h1 id="input">Input</h1>
 <h2 id="time">Time</h2>
 <p><img alt="time" src="../node-images/time.png" /></p>
@@ -993,16 +1021,22 @@ gradient editor. </p>
 <p>This node provides access to the global masks you are use to in Poi.
 While there isn't much to see in the node editor the inspector uses the same
 dropdown that you can find in many other places in the shader.</p>
+<h3><b><u>Note that this node is not currently compatiable with the Preview Node</u></b></h3>
+
 <h2 id="read-property">Read Property</h2>
 <p><img alt="read-property" src="../node-images/read-property.png" /></p>
 <p>Just as the Poi Output node allows you to write properties this node enables
 you to read from them. This when used with the global mask node enables you to
 disable your node for certian parts of the mesh.</p>
+<h3><b><u>Note that this node is not currently compatiable with the Preview Node</u></b></h3>
+
 <h2 id="camera-distance-proximity">Camera Distance / Proximity</h2>
 <p><img alt="camera-distance" src="../node-images/camera-distance.png" /></p>
 <p>This node provides the distance a pixel is from the camera.</p>
 <p>The world output is in world space.<br />
 The object output is in local space to the object and it is effected by object scale.</p>
+<h3><b><u>Note that this node is not currently compatiable with the Preview Node</u></b></h3>
+
 <h1 id="trig">Trig</h1>
 <h2 id="sine-cosine-tangent">Sine / Cosine / Tangent</h2>
 <p><img alt="trig" src="../node-images/trig.png" /></p>
