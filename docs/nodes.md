@@ -101,12 +101,17 @@ recreated every time you update the text.
 This node allows for viewing of previews of parts of the shader to help
 visualize the logic.  To use it plug any node in to its input. Float nodes will
 be shown in black and white. Vector2 and Vector3 nodes will be shown by
-replacing. The alpha channel for Vector4s are set to fully opaque to make it
+replacing RGB with their corresponding XYZ values.
+The alpha channel for Vector4s are set to fully opaque to make it
 possible to view the preview.
 
 The preview node can not handle the ReadProperty , Global Mask, or Camera
 Distance node. Using them in a will result in an error and either the shader
 being pink or not generating at all. 
+
+To get audio link working with this node you will need to be in play mode.
+Updates to the module often break AudioLink. Toggling the Audio Link source in
+unity on and off resolves the issue.
 
 The Debug Panel is for internal use and will change in the future, but you may find it helpful.
 
