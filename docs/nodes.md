@@ -91,6 +91,25 @@ to have their names mangled to match the values actually present in the shader.
 
 In the example above the value Bang is replaced with Clang.xyxy.
 
+Note that when this is used with the Preview Node you will often have a broken
+shader while you are typing. This is to be expected and the shader is
+recreated every time you update the text.
+
+### Preview
+![preview](node-images/preview.png)
+
+This node allows for viewing of previews of parts of the shader to help
+visualize the logic.  To use it plug any node in to its input. Float nodes will
+be shown in black and white. Vector2 and Vector3 nodes will be shown by
+replacing. The alpha channel for Vector4s are set to fully opaque to make it
+possible to view the preview.
+
+The preview node can not handle the ReadProperty , Global Mask, or Camera
+Distance node. Using them in a will result in an error and either the shader
+being pink or not generating at all. 
+
+The Debug Panel is for internal use and will change in the future, but you may find it helpful.
+
 #Input
 ## Time
 ![time](node-images/time.png)
@@ -143,12 +162,16 @@ This node provides access to the global masks you are use to in Poi.
 While there isn't much to see in the node editor the inspector uses the same
 dropdown that you can find in many other places in the shader.
 
+<h3><b><u>Note that this node is not currently compatiable with the Preview Node</u></b></h3>
+
 ## Read Property
 ![read-property](node-images/read-property.png)
 
 Just as the Poi Output node allows you to write properties this node enables
 you to read from them. This when used with the global mask node enables you to
 disable your node for certian parts of the mesh.
+
+<h3><b><u>Note that this node is not currently compatiable with the Preview Node</u></b></h3>
 
 ## Camera Distance / Proximity
 ![camera-distance](node-images/camera-distance.png)
@@ -157,6 +180,8 @@ This node provides the distance a pixel is from the camera.
 
 The world output is in world space.  
 The object output is in local space to the object and it is effected by object scale.
+
+<h3><b><u>Note that this node is not currently compatiable with the Preview Node</u></b></h3>
 
 #Trig
 
