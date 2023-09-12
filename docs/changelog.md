@@ -1,5 +1,9 @@
 # Versions
 
+## v 1.4.0 Preview node
+
+- Added [Preview Node](../nodes/#Preview)
+
 ## v 1.3.0 Proximity / Camera Distance
 
 - Added [Camera Distance](../nodes/#camera-distance-proximity) support
