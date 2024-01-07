@@ -3,7 +3,8 @@
 ### Max / Min
 ![min-max.png](node-images/min-max.png)
 
-Returns the smaller or larger of the inputs. Each component of the input is operated on seperatly.
+Returns the smaller or larger of the inputs. Each component of the input is
+operated on separately.
 
 ### Lerp/Mix/Blend
 ![Lerp](node-images/lerp.png)
@@ -75,7 +76,7 @@ Extend the input to contain more values. Missing values will be replaced with
 ### Split
 ![split](node-images/split.png)
 
-This node splits a multi component input into parts. The outputs dynamically change to match the avaliable 
+This node splits a multi component input into parts. The outputs dynamically change to match the available 
 ones in the input.
 
 ### Raw Text
@@ -126,10 +127,16 @@ Returns the number of seconds since the world loaded. This is not synced.
 
 Allows creating a property that can be edited in your modules section of the
 material properties.  If checked the `Is Constant` checkbox will cause the
-value to be used directly and it will not be avaliable for editing in the inspector. 
+value to be used directly and it will not be available for editing in the inspector. 
 
 The type of property can be selected from the dropdown. The name used in the
 material properties can be found and edited in the upper text box.
+
+![float range](node-images/float-range.png)
+
+A special case UI is available for the float property type. If you enable `Use
+Float Range` you will be able to set a range for the node and get a slider in
+your shader. This can be seen in the image above.
 
 ## Texture - Poiyomi controls
 ![texture](node-images/texture.png)
@@ -174,9 +181,9 @@ dropdown that you can find in many other places in the shader.
 
 Just as the Poi Output node allows you to write properties this node enables
 you to read from them. This when used with the global mask node enables you to
-disable your node for certian parts of the mesh.
+disable your node for certain parts of the mesh.
 
-<h3><b><u>Note that this node is not currently compatiable with the Preview Node</u></b></h3>
+<h3><b><u>Note that this node is not currently compatible with the Preview Node</u></b></h3>
 
 ## Camera Distance / Proximity
 ![camera-distance](node-images/camera-distance.png)
@@ -186,7 +193,26 @@ This node provides the distance a pixel is from the camera.
 The world output is in world space.  
 The object output is in local space to the object and it is effected by object scale.
 
-<h3><b><u>Note that this node is not currently compatiable with the Preview Node</u></b></h3>
+<h3><b><u>Note that this node is not currently compatible with the Preview Node</u></b></h3>
+
+## Vertex Normal
+![vertex normal input](node-images/vertex-normal-input.png)
+
+This node enables both the fragment and vertex stage to access the vertex
+normal data.
+
+The nodes provide normal, tangent, and the bi-normal (cross product of normal and tangent).
+
+## Vertex Position
+![vertex position](node-images/vertex-position.png)
+
+This node enables access to the vertex position and offsets.
+
+Local Offset is the extra offset applied by the shader.
+
+Object Position is the offset when compared to the origin of the object.
+
+World Position is as expected the offset from the world origin.
 
 #Trig
 
@@ -208,15 +234,17 @@ according to normal trig rules.
 
 This is a specialized version of Arc Tangent that takes 2 values and can
 determine which angle the value belongs to. The normal Arc Tangent can't
-determine a diffrence between 45 and 135 degrees for instance. can give the
-confusing results in those cases, but `atan2` uses the fact that it gets 2
-values in to diffrentiate these cases.
+determine a difference between 45 and 135 degrees for instance. This can give
+the confusing results in those cases, but `atan2` uses the fact that it gets 2
+values in to differentiate these cases.
 
 
 ## ToDegrees / ToRadians
 ![angle_conversion](node-images/angle_conversion.png)
 
 Convert values between degrees and radians depending on the node selected
+
+#Output
 
 ## PoiModuleOutput
 ![poi_output](node-images/poi_output.png)
@@ -225,3 +253,21 @@ This is a special node that you can not delete or copy.
 
 This node is used to interact with the larger Poiyomi shader and set values
 used elsewhere in the shader. 
+
+## Normal Output
+![normal output](node-images/normal-output.png)
+
+This node enables you to edit the normals for both the vertex stage and the
+fragment stage. These do not combine with the existing normals and instead
+override them. Use the Normal Input node if you want to combine with them.
+
+As suggested by the names both the Frag and Vertex normals are in world space.
+
+## Vertex Position Output
+![vertex position output](node-images/vertex-position-output.png)
+
+This node lets you set the local offset (in object space) for the node.
+Combine this with the vertex position input node of you want to keep
+pre-existing transforms.
+
+
