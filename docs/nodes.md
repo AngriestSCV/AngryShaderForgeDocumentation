@@ -8,7 +8,7 @@ operated on separately.
 
 ### Lerp/Mix/Blend
 ![Lerp](node-images/lerp.png)
-<h2>High detail lerp docs <a href="lerp.md">Here</a></h2>
+<h2>High detail lerp docs <a href="/nodes/lerp">Here</a></h2>
 
 Lerp between A and B inputs.
 
