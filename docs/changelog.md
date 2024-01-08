@@ -1,5 +1,17 @@
 # Versions
 
+## v 1.5.x Vertex Stage
+
+- Added range to float properties
+- Added Vertex Normal input and output nodes
+- Added Vertex offset node
+- Updated loading to make loading more reliable.
+- Introduced concept for Vertex vs Fragment code
+
+### Internal Details
+- Now uses Unity dependency injection (not related to Unity Engine despite the name)
+- Updated namespaces in C#
+
 ## v 1.4.0 Preview node
 
 - Added [Preview](../nodes/#preview) Node
