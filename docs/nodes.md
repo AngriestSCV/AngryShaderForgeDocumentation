@@ -12,12 +12,11 @@ operated on separately.
 
 Lerp between A and B inputs.
 
-found below showing the expected values.  
-Lerp is a linear interpolation between the first 2 elements. A table can be
-This node is excelent for smoothly picking between values in a range.  
+Lerp is a linear interpolation between the first 2 elements. 
+This node is excellent for smoothly picking between values in a range,
+or selecting one of 2 inputs.
 
 See the link above for a detailed breakdown of exactly how this node works.
-
 
 ### Step
 ![Step](node-images/step.png)
