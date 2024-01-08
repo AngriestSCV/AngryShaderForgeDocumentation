@@ -1,12 +1,16 @@
 # Versions
 
-## v 1.5.x Vertex Stage
+## v 1.5.x Vertex Stage support
 
 - Added range to float properties
-- Added Vertex Normal input and output nodes
-- Added Vertex offset node
+- Added [Vertex Normal output](../nodes/#normal-output) node
+- Added [Vertex Normal](../nodes/#vertex-normal) input node
+- Added [Vertex Position](../nodes/#vertex-position) input node
+- Added [Vertex Position output](../nodes/#vertex-position-output) node
+- Added [Vertex Position](../nodes/#vertex-position) node
 - Updated loading to make loading more reliable.
 - Introduced concept for Vertex vs Fragment code
+- Added errors for using invalid nodes in the wrong context
 
 ### Internal Details
 - Now uses Unity dependency injection (not related to Unity Engine despite the name)
