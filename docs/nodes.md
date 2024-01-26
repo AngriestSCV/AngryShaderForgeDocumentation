@@ -52,6 +52,36 @@ These math nodes preform basic math on their inputs.
 The ports are always the same type and each operation takes place independently 
 on the components of the inputs.
 
+### Trivial Math functions
+These take in one value and output one value. They all operate component wise
+meaning that x,y,z, and w are all operated on independently. To save space these nodes won't get an image.
+
+- Absolute Value: Multiply negative values by -1 to make them positive
+- Ceiling: Find the next largest integer for a non integer value. For instance 1.4 becomes 2. -1.4 becomes -1
+- Exponential2: raise 2 to the Nth power where N is the input value.
+- Exponential: raise e (approximately 2.718281) to the Nth power where N is the input value.
+- Floor: Find the next smallest integer for a non integer value. For instance 1.4 becomes 1. -1.4 becomes -2
+- Fraction: Discard the non fractional part of a value. 2.4 becomes 0.4
+- LogrithmBase10: Returns the Log base 10 of the input value
+- LogrithmBase2: Returns the Log base 2 of the input value
+- NaturalLogarithm: Returns the Log base e (approximately 2.718281) of the input value
+- Round: Round the input to the nearest whole number. 1.4 becomes 1. Note that
+  for values exceptionally close to 0.5 you should look into rounding modes and
+  understand that graphics cards are not always perfectly accurate in their
+  math. [Rounding Wikipedia](https://en.wikipedia.org/wiki/Rounding) 
+- Saturate: Clamps the values between 0 and 1.0
+- Truncate: Discard the fractional part of a number. You can think of this as rounding toward zero
+
+### One Minus
+![one-minus](node-images/one-minus.png)
+
+This node subtracts 1 from each component of the input. Think of this as 1.0 - Input
+
+### Vector Scale
+![vector-scale](node-images/vector-scale.png)
+
+This multiplies the vector by the input scale equally in all directions.
+
 ## Misc
 
 ### HSV To RGB
@@ -95,25 +125,11 @@ Note that when this is used with the Preview Node you will often have a broken
 shader while you are typing. This is to be expected and the shader is
 recreated every time you update the text.
 
-### Preview
-![preview](node-images/preview.png)
+### Identity/Relay
+![identity](node-images/identity.png)
 
-This node allows for viewing of previews of parts of the shader to help
-visualize the logic.  To use it plug any node in to its input. Float nodes will
-be shown in black and white. Vector2 and Vector3 nodes will be shown by
-replacing RGB with their corresponding XYZ values.
-The alpha channel for Vector4s are set to fully opaque to make it
-possible to view the preview.
-
-The preview node can not handle the ReadProperty , Global Mask, or Camera
-Distance node. Using them in a will result in an error and either the shader
-being pink or not generating at all. 
-
-To get audio link working with this node you will need to be in play mode.
-Updates to the module often break AudioLink. Toggling the Audio Link source in
-unity on and off resolves the issue.
-
-The Debug Panel is for internal use and will change in the future, but you may find it helpful.
+This node has no meaning to the generated shader. 
+It allows for better routing and organization of the node tree.
 
 #Input
 ## Time
@@ -131,6 +147,13 @@ value to be used directly and it will not be available for editing in the inspec
 The type of property can be selected from the dropdown. The name used in the
 material properties can be found and edited in the upper text box.
 
+### Property Drawers
+![property-folder-nodes](node-images/property-folder-nodes.png)
+![property-folder-material](node-images/property-folder-material.png)
+
+You can use property names with one or more `/`'s in them to create folders in the output property as can be seen in the examples below. 
+
+### Float Range
 ![float range](node-images/float-range.png)
 
 A special case UI is available for the float property type. If you enable `Use
@@ -142,6 +165,11 @@ your shader. This can be seen in the image above.
 
 Create a new texture that is configured like it would be if it was a built in
 Poiyomi texture.
+
+## UV Texture Sample
+![uv-texture](node-images/uv-texture-sample.png)
+
+This samples a texture that is sampled by the provided UVs.
 
 ## AudioLink Simple Sample
 ![audiolink_sample](node-images/audiolink_sample.png)
@@ -269,4 +297,23 @@ This node lets you set the local offset (in object space) for the node.
 Combine this with the vertex position input node of you want to keep
 pre-existing transforms.
 
+### Preview
+![preview](node-images/preview.png)
+
+This node allows for viewing of previews of parts of the shader to help
+visualize the logic.  To use it plug any node in to its input. Float nodes will
+be shown in black and white. Vector2 and Vector3 nodes will be shown by
+replacing RGB with their corresponding XYZ values.
+The alpha channel for Vector4s are set to fully opaque to make it
+possible to view the preview.
+
+The preview node can not handle the ReadProperty , Global Mask, or Camera
+Distance node. Using them in a will result in an error and either the shader
+being pink or not generating at all. 
+
+To get audio link working with this node you will need to be in play mode.
+Updates to the module often break AudioLink. Toggling the Audio Link source in
+unity on and off resolves the issue.
+
+The Debug Panel is for internal use and will change in the future, but you may find it helpful.
 

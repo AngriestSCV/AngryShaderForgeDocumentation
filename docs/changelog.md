@@ -8,12 +8,18 @@
 - Added [Vertex Position](../nodes/#vertex-position) input node
 - Added [Vertex Position output](../nodes/#vertex-position-output) node
 - Added [Vertex Position](../nodes/#vertex-position) node
+- Added [One Minus](../nodes/#one-minus) node
+- Added [Property](../nodes/#property) feature for float range
+- Added [Property](../nodes/#property) feature property drawers.
+- Added [Graph Editor](../graph-editor-overview) documentation.
+
 - Updated loading to make loading more reliable.
 - Introduced concept for Vertex vs Fragment code
 - Added errors for using invalid nodes in the wrong context
+- Fixed bug where removing the active AngrySF module from the graph editor would leave it in an odd state
 
 ### Internal Details
-- Now uses Unity dependency injection (not related to Unity Engine despite the name)
+- Now uses UnityContainer dependency injection (not related to Unity Engine despite the name)
 - Updated namespaces in C#
 
 ## v 1.4.0 Preview node
