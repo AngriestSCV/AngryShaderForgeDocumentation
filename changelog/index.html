@@ -281,6 +281,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../graph-editor-overview/" class="md-nav__link">
+        Graph Editor Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../examples/" class="md-nav__link">
         Examples
       </a>
@@ -328,6 +343,26 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v-15x-vertex-stage-support" class="md-nav__link">
+    v 1.5.x Vertex Stage support
+  </a>
+  
+    <nav class="md-nav" aria-label="v 1.5.x Vertex Stage support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internal-details" class="md-nav__link">
+    Internal Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#v-140-preview-node" class="md-nav__link">
@@ -399,6 +434,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#v-15x-vertex-stage-support" class="md-nav__link">
+    v 1.5.x Vertex Stage support
+  </a>
+  
+    <nav class="md-nav" aria-label="v 1.5.x Vertex Stage support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internal-details" class="md-nav__link">
+    Internal Details
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v-140-preview-node" class="md-nav__link">
     v 1.4.0 Preview node
   </a>
@@ -449,6 +504,32 @@
 
 
 <h1 id="versions">Versions</h1>
+<h2 id="v-15x-vertex-stage-support">v 1.5.x Vertex Stage support</h2>
+<ul>
+<li>Added range to float properties</li>
+<li>Added <a href="../nodes/#normal-output">Vertex Normal output</a> node</li>
+<li>Added <a href="../nodes/#vertex-normal">Vertex Normal</a> input node</li>
+<li>Added <a href="../nodes/#vertex-position">Vertex Position</a> input node</li>
+<li>Added <a href="../nodes/#vertex-position-output">Vertex Position output</a> node</li>
+<li>Added <a href="../nodes/#vertex-position">Vertex Position</a> node</li>
+<li>Added <a href="../nodes/#one-minus">One Minus</a> node</li>
+<li>Added <a href="../nodes/#property">Property</a> feature for float range</li>
+<li>Added <a href="../nodes/#property">Property</a> feature property drawers.</li>
+<li>
+<p>Added <a href="../graph-editor-overview">Graph Editor</a> documentation.</p>
+</li>
+<li>
+<p>Updated loading to make loading more reliable.</p>
+</li>
+<li>Introduced concept for Vertex vs Fragment code</li>
+<li>Added errors for using invalid nodes in the wrong context</li>
+<li>Fixed bug where removing the active AngrySF module from the graph editor would leave it in an odd state</li>
+</ul>
+<h3 id="internal-details">Internal Details</h3>
+<ul>
+<li>Now uses UnityContainer dependency injection (not related to Unity Engine despite the name)</li>
+<li>Updated namespaces in C#</li>
+</ul>
 <h2 id="v-140-preview-node">v 1.4.0 Preview node</h2>
 <ul>
 <li>Added <a href="../nodes/#preview">Preview</a> Node</li>
