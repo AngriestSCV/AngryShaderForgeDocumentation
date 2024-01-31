@@ -1,6 +1,6 @@
 # Versions
 
-## v 1.5.x Vertex Stage support
+## v 1.5.16 Vertex Stage support
 
 - Added range to float properties
 - Added [Vertex Normal output](../nodes/#normal-output) node
