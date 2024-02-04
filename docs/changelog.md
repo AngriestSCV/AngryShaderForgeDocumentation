@@ -1,5 +1,9 @@
 # Versions
 
+## v 1.5.18 
+
+- Updated visuals to make some backgrounds non transparent
+
 ## v 1.5.17 
 
 - Fixed Float property node looking wrong in Unity 2022
