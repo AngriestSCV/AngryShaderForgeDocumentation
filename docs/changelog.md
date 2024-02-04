@@ -1,5 +1,9 @@
 # Versions
 
+## v 1.5.17 
+
+- Fixed Float property node looking wrong in Unity 2022
+
 ## v 1.5.16 Vertex Stage support
 
 - Added range to float properties
